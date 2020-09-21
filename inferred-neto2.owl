@@ -1,0 +1,531 @@
+Prefix(:=<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(swrla:=<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(untitled-ontology-42:=<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#>)
+
+
+Ontology(<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42>
+Annotation(rdfs:comment "Trabalho que tem como objetivo extender a ontologia NetO. 
+Trabalho de Banco de Dados - PPGCC - UFJF.
+
+Modificações: considerar peso relacionado às tags e recomendar desenvolvedores, considerando um tópico de interesse.")
+Annotation(owl:versionInfo "Sparql fará as somas dos valores associados à classe TopicWeight, de cada indivíduo, e como retorno teremos uma valor a ser comparado para fazer a recomendação.")
+Annotation(owl:versionInfo "versão final")
+
+Declaration(Class(untitled-ontology-42:Keyword))
+Declaration(Class(untitled-ontology-42:KeywordWeight))
+Declaration(Class(untitled-ontology-42:Node))
+Declaration(Class(untitled-ontology-42:None))
+Declaration(Class(untitled-ontology-42:Required))
+Declaration(Class(untitled-ontology-42:SpecificTopic))
+Declaration(Class(untitled-ontology-42:Subject))
+Declaration(Class(untitled-ontology-42:Topic))
+Declaration(Class(untitled-ontology-42:TopicWeight))
+Declaration(Class(untitled-ontology-42:Weight))
+Declaration(ObjectProperty(untitled-ontology-42:hasKeyword))
+Declaration(ObjectProperty(untitled-ontology-42:hasMoreRelevance))
+Declaration(ObjectProperty(untitled-ontology-42:hasSameInterest))
+Declaration(ObjectProperty(untitled-ontology-42:hasSpecificTopic))
+Declaration(ObjectProperty(untitled-ontology-42:hasSubject))
+Declaration(ObjectProperty(untitled-ontology-42:hasTopic))
+Declaration(ObjectProperty(untitled-ontology-42:hasTopicWeight))
+Declaration(ObjectProperty(untitled-ontology-42:hasWeight))
+Declaration(ObjectProperty(untitled-ontology-42:subTopicOf))
+Declaration(DataProperty(untitled-ontology-42:name))
+Declaration(DataProperty(untitled-ontology-42:totalWeight))
+Declaration(DataProperty(untitled-ontology-42:weight))
+Declaration(NamedIndividual(untitled-ontology-42:LPSubject))
+Declaration(NamedIndividual(untitled-ontology-42:MLSubject))
+Declaration(NamedIndividual(untitled-ontology-42:NONE))
+Declaration(NamedIndividual(untitled-ontology-42:PythonForML))
+Declaration(NamedIndividual(untitled-ontology-42:PythonSubject))
+Declaration(NamedIndividual(untitled-ontology-42:TopicWeightnode1))
+Declaration(NamedIndividual(untitled-ontology-42:TopicWeightnode2))
+Declaration(NamedIndividual(untitled-ontology-42:TopicWeightnode3))
+Declaration(NamedIndividual(untitled-ontology-42:TopicWeightnode4))
+Declaration(NamedIndividual(untitled-ontology-42:TopicWeightnode5))
+Declaration(NamedIndividual(untitled-ontology-42:node1))
+Declaration(NamedIndividual(untitled-ontology-42:node1python))
+Declaration(NamedIndividual(untitled-ontology-42:node1python2.7))
+Declaration(NamedIndividual(untitled-ontology-42:node1python2.7Weight))
+Declaration(NamedIndividual(untitled-ontology-42:node1pythonWeight))
+Declaration(NamedIndividual(untitled-ontology-42:node1scikit-learn))
+Declaration(NamedIndividual(untitled-ontology-42:node1scikit-learnWeight))
+Declaration(NamedIndividual(untitled-ontology-42:node2))
+Declaration(NamedIndividual(untitled-ontology-42:node3))
+Declaration(NamedIndividual(untitled-ontology-42:node3python))
+Declaration(NamedIndividual(untitled-ontology-42:node3pythonWeight))
+Declaration(NamedIndividual(untitled-ontology-42:node4))
+Declaration(NamedIndividual(untitled-ontology-42:node4python2.7))
+Declaration(NamedIndividual(untitled-ontology-42:node4python2.7Weight))
+Declaration(NamedIndividual(untitled-ontology-42:node4scikit-learn))
+Declaration(NamedIndividual(untitled-ontology-42:node4scikit-learnWeight))
+Declaration(NamedIndividual(untitled-ontology-42:node5))
+Declaration(NamedIndividual(untitled-ontology-42:node5Java))
+Declaration(NamedIndividual(untitled-ontology-42:node5JavaWeight))
+Declaration(NamedIndividual(<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++>))
+Declaration(NamedIndividual(<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>))
+Declaration(AnnotationProperty(swrla:isRuleEnabled))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: untitled-ontology-42:hasKeyword (untitled-ontology-42:hasKeyword)
+
+SubObjectPropertyOf(untitled-ontology-42:hasKeyword owl:topObjectProperty)
+AsymmetricObjectProperty(untitled-ontology-42:hasKeyword)
+IrreflexiveObjectProperty(untitled-ontology-42:hasKeyword)
+ObjectPropertyDomain(untitled-ontology-42:hasKeyword untitled-ontology-42:Node)
+ObjectPropertyRange(untitled-ontology-42:hasKeyword untitled-ontology-42:Keyword)
+
+# Object Property: untitled-ontology-42:hasMoreRelevance (untitled-ontology-42:hasMoreRelevance)
+
+SubObjectPropertyOf(untitled-ontology-42:hasMoreRelevance owl:topObjectProperty)
+ObjectPropertyDomain(untitled-ontology-42:hasMoreRelevance untitled-ontology-42:Node)
+ObjectPropertyRange(untitled-ontology-42:hasMoreRelevance untitled-ontology-42:Node)
+
+# Object Property: untitled-ontology-42:hasSameInterest (untitled-ontology-42:hasSameInterest)
+
+SubObjectPropertyOf(untitled-ontology-42:hasSameInterest owl:topObjectProperty)
+ObjectPropertyDomain(untitled-ontology-42:hasSameInterest untitled-ontology-42:Node)
+ObjectPropertyRange(untitled-ontology-42:hasSameInterest untitled-ontology-42:Node)
+
+# Object Property: untitled-ontology-42:hasSpecificTopic (untitled-ontology-42:hasSpecificTopic)
+
+SubObjectPropertyOf(untitled-ontology-42:hasSpecificTopic owl:topObjectProperty)
+
+# Object Property: untitled-ontology-42:hasSubject (untitled-ontology-42:hasSubject)
+
+SubObjectPropertyOf(untitled-ontology-42:hasSubject owl:topObjectProperty)
+
+# Object Property: untitled-ontology-42:hasTopic (untitled-ontology-42:hasTopic)
+
+SubObjectPropertyOf(untitled-ontology-42:hasTopic owl:topObjectProperty)
+
+# Object Property: untitled-ontology-42:hasTopicWeight (untitled-ontology-42:hasTopicWeight)
+
+AnnotationAssertion(rdfs:comment untitled-ontology-42:hasTopicWeight "Relação referente a ter um peso relacionado ao tópico.")
+SubObjectPropertyOf(untitled-ontology-42:hasTopicWeight owl:topObjectProperty)
+ObjectPropertyDomain(untitled-ontology-42:hasTopicWeight untitled-ontology-42:Node)
+ObjectPropertyRange(untitled-ontology-42:hasTopicWeight untitled-ontology-42:TopicWeight)
+ObjectPropertyRange(untitled-ontology-42:hasTopicWeight untitled-ontology-42:Weight)
+
+# Object Property: untitled-ontology-42:hasWeight (untitled-ontology-42:hasWeight)
+
+SubObjectPropertyOf(untitled-ontology-42:hasWeight owl:topObjectProperty)
+
+# Object Property: untitled-ontology-42:subTopicOf (untitled-ontology-42:subTopicOf)
+
+SubObjectPropertyOf(untitled-ontology-42:subTopicOf owl:topObjectProperty)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: untitled-ontology-42:name (untitled-ontology-42:name)
+
+SubDataPropertyOf(untitled-ontology-42:name owl:topDataProperty)
+
+# Data Property: untitled-ontology-42:totalWeight (untitled-ontology-42:totalWeight)
+
+SubDataPropertyOf(untitled-ontology-42:totalWeight owl:topDataProperty)
+
+# Data Property: untitled-ontology-42:weight (untitled-ontology-42:weight)
+
+SubDataPropertyOf(untitled-ontology-42:weight owl:topDataProperty)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: untitled-ontology-42:Keyword (untitled-ontology-42:Keyword)
+
+SubClassOf(untitled-ontology-42:Keyword owl:Thing)
+DisjointClasses(untitled-ontology-42:Keyword untitled-ontology-42:Node)
+DisjointClasses(untitled-ontology-42:Keyword untitled-ontology-42:Subject)
+
+# Class: untitled-ontology-42:KeywordWeight (untitled-ontology-42:KeywordWeight)
+
+SubClassOf(untitled-ontology-42:KeywordWeight untitled-ontology-42:Weight)
+
+# Class: untitled-ontology-42:Node (untitled-ontology-42:Node)
+
+SubClassOf(untitled-ontology-42:Node owl:Thing)
+DisjointClasses(untitled-ontology-42:Node untitled-ontology-42:Subject)
+
+# Class: untitled-ontology-42:None (untitled-ontology-42:None)
+
+SubClassOf(untitled-ontology-42:None owl:Thing)
+
+# Class: untitled-ontology-42:Required (untitled-ontology-42:Required)
+
+AnnotationAssertion(rdfs:comment untitled-ontology-42:Required "Classe que tem como objetivo indicar o tópico/tópico específico de interesse, para recomendação.")
+SubClassOf(untitled-ontology-42:Required owl:Thing)
+
+# Class: untitled-ontology-42:SpecificTopic (untitled-ontology-42:SpecificTopic)
+
+SubClassOf(untitled-ontology-42:SpecificTopic untitled-ontology-42:Topic)
+
+# Class: untitled-ontology-42:Subject (untitled-ontology-42:Subject)
+
+SubClassOf(untitled-ontology-42:Subject owl:Thing)
+
+# Class: untitled-ontology-42:Topic (untitled-ontology-42:Topic)
+
+SubClassOf(untitled-ontology-42:Topic owl:Thing)
+
+# Class: untitled-ontology-42:TopicWeight (untitled-ontology-42:TopicWeight)
+
+SubClassOf(untitled-ontology-42:TopicWeight untitled-ontology-42:Weight)
+
+# Class: untitled-ontology-42:Weight (untitled-ontology-42:Weight)
+
+SubClassOf(untitled-ontology-42:Weight owl:Thing)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: untitled-ontology-42:LPSubject (untitled-ontology-42:LPSubject)
+
+ClassAssertion(untitled-ontology-42:Subject untitled-ontology-42:LPSubject)
+ClassAssertion(untitled-ontology-42:Topic untitled-ontology-42:LPSubject)
+ClassAssertion(owl:Thing untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:subTopicOf untitled-ontology-42:LPSubject untitled-ontology-42:NONE)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:LPSubject "C++"^^xsd:string)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:LPSubject "Java"^^xsd:string)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:LPSubject "python"^^xsd:string)
+
+# Individual: untitled-ontology-42:MLSubject (untitled-ontology-42:MLSubject)
+
+ClassAssertion(untitled-ontology-42:Subject untitled-ontology-42:MLSubject)
+ClassAssertion(untitled-ontology-42:Topic untitled-ontology-42:MLSubject)
+ClassAssertion(owl:Thing untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:MLSubject untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:subTopicOf untitled-ontology-42:MLSubject untitled-ontology-42:NONE)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:MLSubject "scikit-learn"^^xsd:string)
+
+# Individual: untitled-ontology-42:NONE (untitled-ontology-42:NONE)
+
+ClassAssertion(untitled-ontology-42:None untitled-ontology-42:NONE)
+ClassAssertion(owl:Thing untitled-ontology-42:NONE)
+
+# Individual: untitled-ontology-42:PythonForML (untitled-ontology-42:PythonForML)
+
+ClassAssertion(untitled-ontology-42:SpecificTopic untitled-ontology-42:PythonForML)
+ClassAssertion(untitled-ontology-42:Topic untitled-ontology-42:PythonForML)
+ClassAssertion(owl:Thing untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:subTopicOf untitled-ontology-42:PythonForML untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:subTopicOf untitled-ontology-42:PythonForML untitled-ontology-42:PythonSubject)
+
+# Individual: untitled-ontology-42:PythonSubject (untitled-ontology-42:PythonSubject)
+
+ClassAssertion(untitled-ontology-42:Required untitled-ontology-42:PythonSubject)
+ClassAssertion(untitled-ontology-42:Subject untitled-ontology-42:PythonSubject)
+ClassAssertion(untitled-ontology-42:Topic untitled-ontology-42:PythonSubject)
+ClassAssertion(owl:Thing untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:PythonSubject untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:subTopicOf untitled-ontology-42:PythonSubject untitled-ontology-42:NONE)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:PythonSubject "python"^^xsd:string)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:PythonSubject "python2.7"^^xsd:string)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:PythonSubject "scikit-learn"^^xsd:string)
+
+# Individual: untitled-ontology-42:TopicWeightnode1 (untitled-ontology-42:TopicWeightnode1)
+
+ClassAssertion(untitled-ontology-42:TopicWeight untitled-ontology-42:TopicWeightnode1)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:TopicWeightnode1)
+ClassAssertion(owl:Thing untitled-ontology-42:TopicWeightnode1)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:TopicWeightnode1 untitled-ontology-42:node1python2.7Weight)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:TopicWeightnode1 untitled-ontology-42:node1pythonWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:TopicWeightnode1 untitled-ontology-42:node1scikit-learnWeight)
+DataPropertyAssertion(untitled-ontology-42:totalWeight untitled-ontology-42:TopicWeightnode1 "23"^^xsd:integer)
+
+# Individual: untitled-ontology-42:TopicWeightnode2 (untitled-ontology-42:TopicWeightnode2)
+
+ClassAssertion(untitled-ontology-42:TopicWeight untitled-ontology-42:TopicWeightnode2)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:TopicWeightnode2)
+ClassAssertion(owl:Thing untitled-ontology-42:TopicWeightnode2)
+DataPropertyAssertion(untitled-ontology-42:totalWeight untitled-ontology-42:TopicWeightnode2 "0"^^xsd:integer)
+
+# Individual: untitled-ontology-42:TopicWeightnode3 (untitled-ontology-42:TopicWeightnode3)
+
+ClassAssertion(untitled-ontology-42:TopicWeight untitled-ontology-42:TopicWeightnode3)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:TopicWeightnode3)
+ClassAssertion(owl:Thing untitled-ontology-42:TopicWeightnode3)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:TopicWeightnode3 untitled-ontology-42:node3pythonWeight)
+DataPropertyAssertion(untitled-ontology-42:totalWeight untitled-ontology-42:TopicWeightnode3 "19"^^xsd:integer)
+
+# Individual: untitled-ontology-42:TopicWeightnode4 (untitled-ontology-42:TopicWeightnode4)
+
+ClassAssertion(untitled-ontology-42:TopicWeight untitled-ontology-42:TopicWeightnode4)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:TopicWeightnode4)
+ClassAssertion(owl:Thing untitled-ontology-42:TopicWeightnode4)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:TopicWeightnode4 untitled-ontology-42:node4python2.7Weight)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:TopicWeightnode4 untitled-ontology-42:node4scikit-learnWeight)
+DataPropertyAssertion(untitled-ontology-42:totalWeight untitled-ontology-42:TopicWeightnode4 "20"^^xsd:integer)
+
+# Individual: untitled-ontology-42:TopicWeightnode5 (untitled-ontology-42:TopicWeightnode5)
+
+ClassAssertion(untitled-ontology-42:TopicWeight untitled-ontology-42:TopicWeightnode5)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:TopicWeightnode5)
+ClassAssertion(owl:Thing untitled-ontology-42:TopicWeightnode5)
+DataPropertyAssertion(untitled-ontology-42:totalWeight untitled-ontology-42:TopicWeightnode5 "0"^^xsd:integer)
+
+# Individual: untitled-ontology-42:node1 (untitled-ontology-42:node1)
+
+ClassAssertion(untitled-ontology-42:Node untitled-ontology-42:node1)
+ClassAssertion(owl:Thing untitled-ontology-42:node1)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node1 untitled-ontology-42:node1python)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node1 untitled-ontology-42:node1python2.7)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node1 untitled-ontology-42:node1scikit-learn)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node1 untitled-ontology-42:node2)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node1 untitled-ontology-42:node3)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node1 untitled-ontology-42:node4)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node1 untitled-ontology-42:node5)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node1 untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1 untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1 untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopicWeight untitled-ontology-42:node1 untitled-ontology-42:TopicWeightnode1)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node1 untitled-ontology-42:node1python2.7Weight)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node1 untitled-ontology-42:node1pythonWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node1 untitled-ontology-42:node1scikit-learnWeight)
+
+# Individual: untitled-ontology-42:node1python (untitled-ontology-42:node1python)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node1python)
+ClassAssertion(owl:Thing untitled-ontology-42:node1python)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1python untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1python untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node1python untitled-ontology-42:node1pythonWeight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node1python "python"^^xsd:string)
+
+# Individual: untitled-ontology-42:node1python2.7 (untitled-ontology-42:node1python2.7)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node1python2.7)
+ClassAssertion(owl:Thing untitled-ontology-42:node1python2.7)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1python2.7 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node1python2.7 untitled-ontology-42:node1python2.7Weight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node1python2.7 "python2.7"^^xsd:string)
+
+# Individual: untitled-ontology-42:node1python2.7Weight (untitled-ontology-42:node1python2.7Weight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node1python2.7Weight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node1python2.7Weight)
+ClassAssertion(owl:Thing untitled-ontology-42:node1python2.7Weight)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node1python2.7Weight untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1python2.7Weight untitled-ontology-42:PythonSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node1python2.7Weight "9"^^xsd:string)
+
+# Individual: untitled-ontology-42:node1pythonWeight (untitled-ontology-42:node1pythonWeight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node1pythonWeight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node1pythonWeight)
+ClassAssertion(owl:Thing untitled-ontology-42:node1pythonWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node1pythonWeight untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1pythonWeight untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1pythonWeight untitled-ontology-42:PythonSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node1pythonWeight "10"^^xsd:string)
+
+# Individual: untitled-ontology-42:node1scikit-learn (untitled-ontology-42:node1scikit-learn)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node1scikit-learn)
+ClassAssertion(owl:Thing untitled-ontology-42:node1scikit-learn)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1scikit-learn untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node1scikit-learn untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node1scikit-learn untitled-ontology-42:node1scikit-learnWeight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node1scikit-learn "scikit-learn"^^xsd:string)
+
+# Individual: untitled-ontology-42:node1scikit-learnWeight (untitled-ontology-42:node1scikit-learnWeight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node1scikit-learnWeight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node1scikit-learnWeight)
+ClassAssertion(owl:Thing untitled-ontology-42:node1scikit-learnWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node1scikit-learnWeight untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1scikit-learnWeight untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node1scikit-learnWeight untitled-ontology-42:PythonSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node1scikit-learnWeight "4"^^xsd:string)
+
+# Individual: untitled-ontology-42:node2 (untitled-ontology-42:node2)
+
+ClassAssertion(untitled-ontology-42:Node untitled-ontology-42:node2)
+ClassAssertion(owl:Thing untitled-ontology-42:node2)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node2 <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++>)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node2 untitled-ontology-42:node1)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node2 untitled-ontology-42:node3)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node2 untitled-ontology-42:node5)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node2 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node2 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopicWeight untitled-ontology-42:node2 untitled-ontology-42:TopicWeightnode2)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node2 <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>)
+
+# Individual: untitled-ontology-42:node3 (untitled-ontology-42:node3)
+
+ClassAssertion(untitled-ontology-42:Node untitled-ontology-42:node3)
+ClassAssertion(owl:Thing untitled-ontology-42:node3)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node3 untitled-ontology-42:node3python)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node3 untitled-ontology-42:node1)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node3 untitled-ontology-42:node2)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node3 untitled-ontology-42:node4)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node3 untitled-ontology-42:node5)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node3 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node3 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node3 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node3 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopicWeight untitled-ontology-42:node3 untitled-ontology-42:TopicWeightnode3)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node3 untitled-ontology-42:node3pythonWeight)
+
+# Individual: untitled-ontology-42:node3python (untitled-ontology-42:node3python)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node3python)
+ClassAssertion(owl:Thing untitled-ontology-42:node3python)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node3python untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node3python untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node3python untitled-ontology-42:node3pythonWeight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node3python "python"^^xsd:string)
+
+# Individual: untitled-ontology-42:node3pythonWeight (untitled-ontology-42:node3pythonWeight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node3pythonWeight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node3pythonWeight)
+ClassAssertion(owl:Thing untitled-ontology-42:node3pythonWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node3pythonWeight untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node3pythonWeight untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node3pythonWeight untitled-ontology-42:PythonSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node3pythonWeight "19"^^xsd:string)
+
+# Individual: untitled-ontology-42:node4 (untitled-ontology-42:node4)
+
+ClassAssertion(untitled-ontology-42:Node untitled-ontology-42:node4)
+ClassAssertion(owl:Thing untitled-ontology-42:node4)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node4 untitled-ontology-42:node4python2.7)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node4 untitled-ontology-42:node4scikit-learn)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node4 untitled-ontology-42:node1)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node4 untitled-ontology-42:node3)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node4 untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node4 untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node4 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node4 untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node4 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopicWeight untitled-ontology-42:node4 untitled-ontology-42:TopicWeightnode4)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node4 untitled-ontology-42:node4python2.7Weight)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node4 untitled-ontology-42:node4scikit-learnWeight)
+
+# Individual: untitled-ontology-42:node4python2.7 (untitled-ontology-42:node4python2.7)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node4python2.7)
+ClassAssertion(owl:Thing untitled-ontology-42:node4python2.7)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node4python2.7 untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node4python2.7 untitled-ontology-42:node4python2.7Weight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node4python2.7 "python2.7"^^xsd:string)
+
+# Individual: untitled-ontology-42:node4python2.7Weight (untitled-ontology-42:node4python2.7Weight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node4python2.7Weight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node4python2.7Weight)
+ClassAssertion(owl:Thing untitled-ontology-42:node4python2.7Weight)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node4python2.7Weight untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node4python2.7Weight untitled-ontology-42:PythonSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node4python2.7Weight "2"^^xsd:string)
+
+# Individual: untitled-ontology-42:node4scikit-learn (untitled-ontology-42:node4scikit-learn)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node4scikit-learn)
+ClassAssertion(owl:Thing untitled-ontology-42:node4scikit-learn)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node4scikit-learn untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node4scikit-learn untitled-ontology-42:PythonSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node4scikit-learn untitled-ontology-42:node4scikit-learnWeight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node4scikit-learn "scikit-learn"^^xsd:string)
+
+# Individual: untitled-ontology-42:node4scikit-learnWeight (untitled-ontology-42:node4scikit-learnWeight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node4scikit-learnWeight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node4scikit-learnWeight)
+ClassAssertion(owl:Thing untitled-ontology-42:node4scikit-learnWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasSpecificTopic untitled-ontology-42:node4scikit-learnWeight untitled-ontology-42:PythonForML)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node4scikit-learnWeight untitled-ontology-42:MLSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node4scikit-learnWeight untitled-ontology-42:PythonSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node4scikit-learnWeight "18"^^xsd:string)
+
+# Individual: untitled-ontology-42:node5 (untitled-ontology-42:node5)
+
+ClassAssertion(untitled-ontology-42:Node untitled-ontology-42:node5)
+ClassAssertion(owl:Thing untitled-ontology-42:node5)
+ObjectPropertyAssertion(untitled-ontology-42:hasKeyword untitled-ontology-42:node5 untitled-ontology-42:node5Java)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node5 untitled-ontology-42:node1)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node5 untitled-ontology-42:node2)
+ObjectPropertyAssertion(untitled-ontology-42:hasSameInterest untitled-ontology-42:node5 untitled-ontology-42:node3)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node5 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node5 untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopicWeight untitled-ontology-42:node5 untitled-ontology-42:TopicWeightnode5)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node5 untitled-ontology-42:node5JavaWeight)
+
+# Individual: untitled-ontology-42:node5Java (untitled-ontology-42:node5Java)
+
+ClassAssertion(untitled-ontology-42:Keyword untitled-ontology-42:node5Java)
+ClassAssertion(owl:Thing untitled-ontology-42:node5Java)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject untitled-ontology-42:node5Java untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight untitled-ontology-42:node5Java untitled-ontology-42:node5JavaWeight)
+DataPropertyAssertion(untitled-ontology-42:name untitled-ontology-42:node5Java "Java"^^xsd:string)
+
+# Individual: untitled-ontology-42:node5JavaWeight (untitled-ontology-42:node5JavaWeight)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight untitled-ontology-42:node5JavaWeight)
+ClassAssertion(untitled-ontology-42:Weight untitled-ontology-42:node5JavaWeight)
+ClassAssertion(owl:Thing untitled-ontology-42:node5JavaWeight)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic untitled-ontology-42:node5JavaWeight untitled-ontology-42:LPSubject)
+DataPropertyAssertion(untitled-ontology-42:weight untitled-ontology-42:node5JavaWeight "9"^^xsd:string)
+
+# Individual: <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++> (<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++>)
+
+ClassAssertion(untitled-ontology-42:Keyword <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++>)
+ClassAssertion(owl:Thing <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++>)
+ObjectPropertyAssertion(untitled-ontology-42:hasSubject <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++> untitled-ontology-42:LPSubject)
+ObjectPropertyAssertion(untitled-ontology-42:hasWeight <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++> <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>)
+DataPropertyAssertion(untitled-ontology-42:name <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++> "C++"^^xsd:string)
+
+# Individual: <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight> (<http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>)
+
+ClassAssertion(untitled-ontology-42:KeywordWeight <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>)
+ClassAssertion(untitled-ontology-42:Weight <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>)
+ClassAssertion(owl:Thing <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight>)
+ObjectPropertyAssertion(untitled-ontology-42:hasTopic <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight> untitled-ontology-42:LPSubject)
+DataPropertyAssertion(untitled-ontology-42:weight <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++Weight> "98"^^xsd:string)
+
+
+DisjointClasses(untitled-ontology-42:Keyword untitled-ontology-42:Node untitled-ontology-42:Subject)
+DifferentIndividuals(untitled-ontology-42:LPSubject untitled-ontology-42:MLSubject)
+DifferentIndividuals(untitled-ontology-42:LPSubject untitled-ontology-42:PythonSubject)
+DifferentIndividuals(untitled-ontology-42:MLSubject untitled-ontology-42:PythonSubject)
+DifferentIndividuals(untitled-ontology-42:node1 untitled-ontology-42:node2 untitled-ontology-42:node3 untitled-ontology-42:node4 untitled-ontology-42:node5)
+DifferentIndividuals(untitled-ontology-42:node1python untitled-ontology-42:node1python2.7 untitled-ontology-42:node1scikit-learn untitled-ontology-42:node3python untitled-ontology-42:node4python2.7 untitled-ontology-42:node4scikit-learn untitled-ontology-42:node5Java <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#node2C++>)
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "keyword hasSubject"^^xsd:string) Annotation(rdfs:label "S1"^^xsd:string) Body(DataPropertyAtom(untitled-ontology-42:name Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:n1)) BuiltInAtom(swrlb:stringEqualIgnoreCase Variable(untitled-ontology-42:n1) Variable(untitled-ontology-42:n2)) ClassAtom(untitled-ontology-42:Subject Variable(untitled-ontology-42:s)) ClassAtom(untitled-ontology-42:Keyword Variable(untitled-ontology-42:k)) DataPropertyAtom(untitled-ontology-42:name Variable(untitled-ontology-42:s) Variable(untitled-ontology-42:n2)))Head(ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:s))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Weight hasTopic"^^xsd:string) Annotation(rdfs:label "S11"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:s)) ClassAtom(untitled-ontology-42:Topic Variable(untitled-ontology-42:s)) ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:w)) ClassAtom(untitled-ontology-42:Keyword Variable(untitled-ontology-42:k)))Head(ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:s))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Define 'weight' como 'KeywordWeight'"^^xsd:string) Annotation(rdfs:label "S9"^^xsd:string) Body(ClassAtom(untitled-ontology-42:Keyword Variable(untitled-ontology-42:k)) ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:w)))Head(ClassAtom(untitled-ontology-42:KeywordWeight Variable(untitled-ontology-42:w))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "SameInterest"^^xsd:string) Annotation(rdfs:label "S7"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n2) Variable(untitled-ontology-42:t)) DifferentIndividualsAtom(Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:n2)) ClassAtom(untitled-ontology-42:Topic Variable(untitled-ontology-42:t)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n2)) ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:t)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:hasSameInterest Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:n2))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "SpecificTopic Required ***"^^xsd:string) Annotation(rdfs:label "S14"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasTopicWeight Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:tw)) ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:w)) ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:ww) Variable(untitled-ontology-42:st)) ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:st)) ClassAtom(untitled-ontology-42:Required Variable(untitled-ontology-42:st)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)) ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:ww)) DifferentIndividualsAtom(Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:ww)))Head(ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:tw) Variable(untitled-ontology-42:w))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Topic Required **"^^xsd:string) Annotation(rdfs:label "S13"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasTopicWeight Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:tw)) ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:w)) ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:t)) ClassAtom(untitled-ontology-42:Required Variable(untitled-ontology-42:t)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:tw) Variable(untitled-ontology-42:w))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "node hasSubject (subTopicOf)"^^xsd:string) Annotation(rdfs:label "S5"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:s)) ClassAtom(untitled-ontology-42:Subject Variable(untitled-ontology-42:s2)) ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:s) Variable(untitled-ontology-42:s2)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:s2))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "node hasTopic"^^xsd:string) Annotation(rdfs:label "S6"^^xsd:string) Body(ClassAtom(untitled-ontology-42:Topic Variable(untitled-ontology-42:s)) ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:s)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:s))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "node hasSubject"^^xsd:string) Annotation(rdfs:label "S2"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:s)) ObjectPropertyAtom(untitled-ontology-42:hasKeyword Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:k)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:hasSubject Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:s))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "node hasKeywordWeight"^^xsd:string) Annotation(rdfs:label "S10"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasKeyword Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:k)) ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:k) Variable(untitled-ontology-42:w)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:hasWeight Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:w))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "node hasSpecificTopic"^^xsd:string) Annotation(rdfs:label "S8"^^xsd:string) Body(ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:t2)) ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:t1)) DifferentIndividualsAtom(Variable(untitled-ontology-42:t1) Variable(untitled-ontology-42:t2)) ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:t1) Variable(untitled-ontology-42:st)) ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:t2) Variable(untitled-ontology-42:st)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n)))Head(ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:st) Variable(untitled-ontology-42:t1)) ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:st) Variable(untitled-ontology-42:t2)) ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:n) Variable(untitled-ontology-42:st))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Node hasMoreRelevance"^^xsd:string) Annotation(rdfs:label "S15"^^xsd:string) Body(DifferentIndividualsAtom(Variable(untitled-ontology-42:n1) Variable(untitled-ontology-42:n2)) DataPropertyAtom(untitled-ontology-42:totalWeight Variable(untitled-ontology-42:ww) Variable(untitled-ontology-42:tww)) ObjectPropertyAtom(untitled-ontology-42:hasTopicWeight Variable(untitled-ontology-42:n2) Variable(untitled-ontology-42:ww)) DataPropertyAtom(untitled-ontology-42:totalWeight Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:tw)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n2)) ClassAtom(untitled-ontology-42:Node Variable(untitled-ontology-42:n1)) ObjectPropertyAtom(untitled-ontology-42:hasTopicWeight Variable(untitled-ontology-42:n1) Variable(untitled-ontology-42:w)) BuiltInAtom(swrlb:greaterThan Variable(untitled-ontology-42:tw) Variable(untitled-ontology-42:tww)) ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n1) Variable(untitled-ontology-42:top1)) ClassAtom(untitled-ontology-42:Required Variable(untitled-ontology-42:top1)) ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:n2) Variable(untitled-ontology-42:top2)) ClassAtom(untitled-ontology-42:Required Variable(untitled-ontology-42:top2)))Head(ObjectPropertyAtom(untitled-ontology-42:hasMoreRelevance Variable(untitled-ontology-42:n1) Variable(untitled-ontology-42:n2))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Subject is Topic"^^xsd:string) Annotation(rdfs:label "S3"^^xsd:string) Body(ClassAtom(untitled-ontology-42:Subject Variable(untitled-ontology-42:s1)) ClassAtom(untitled-ontology-42:None Variable(untitled-ontology-42:s2)) ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:s1) Variable(untitled-ontology-42:s2)))Head(ClassAtom(untitled-ontology-42:Topic Variable(untitled-ontology-42:s1))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment ""^^xsd:string) Annotation(rdfs:label "S4"^^xsd:string) Body(ClassAtom(untitled-ontology-42:Subject Variable(untitled-ontology-42:s3)) ClassAtom(untitled-ontology-42:Subject Variable(untitled-ontology-42:s1)) ClassAtom(untitled-ontology-42:Subject Variable(untitled-ontology-42:s2)) ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:s1) Variable(untitled-ontology-42:s2)) ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:s2) Variable(untitled-ontology-42:s3)))Head(ObjectPropertyAtom(untitled-ontology-42:subTopicOf Variable(untitled-ontology-42:s1) Variable(untitled-ontology-42:s3))))
+DLSafeRule(Annotation(swrla:isRuleEnabled "true"^^xsd:boolean) Annotation(rdfs:comment "Weight hasSpecificTopic"^^xsd:string) Annotation(rdfs:label "S12"^^xsd:string) Body(ClassAtom(untitled-ontology-42:Weight Variable(untitled-ontology-42:w)) ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:t) Variable(untitled-ontology-42:st)) ObjectPropertyAtom(untitled-ontology-42:hasTopic Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:t)))Head(ObjectPropertyAtom(untitled-ontology-42:hasSpecificTopic Variable(untitled-ontology-42:w) Variable(untitled-ontology-42:st))))
+)
