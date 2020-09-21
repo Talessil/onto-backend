@@ -1,0 +1,36 @@
+QUESTOES
+
+-qual pessoa é recomendada para auxiliar em questões relacionadas ao tópico requisitado?
+
+PREFIX : <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#>
+
+SELECT ?Pessoas
+
+WHERE {
+	?Pessoas a :Node .
+	?Pessoas :hasTopicWeight ?TW .
+	?TW :totalWeight ?Peso;
+}
+	ORDER BY DESC (?Peso)
+	LIMIT 1
+
+-qual o peso de cada pessoa em relação ao tópico requisitado?
+
+PREFIX : <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#>
+SELECT ?Pessoas ?Peso
+
+WHERE {
+	?Pessoas a :Node .
+	?Pessoas :hasTopicWeight ?TW .
+	?TW :totalWeight ?Peso;
+}
+
+
+-Quais indivíduos possuem mais relevância do que outros?
+
+PREFIX : <http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#>
+SELECT DISTINCT ?Pessoas ?Pessoas2
+WHERE {
+	?Pessoas a :Node.
+	?a :hasMoreRelevance ?Pessoas2;
+}
