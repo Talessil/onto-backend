@@ -1,0 +1,1595 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#"
+     xml:base="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:untitled-ontology-42="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42">
+        <rdfs:comment>Trabalho que tem como objetivo extender a ontologia NetO. 
+Trabalho de Banco de Dados - PPGCC - UFJF.
+
+Modificações: considerar peso relacionado às tags e recomendar desenvolvedores, considerando um tópico de interesse.</rdfs:comment>
+        <owl:versionInfo>Sparql fará as somas dos valores associados à classe TopicWeight, de cada indivíduo, e como retorno teremos uma valor a ser comparado para fazer a recomendação.</owl:versionInfo>
+        <owl:versionInfo>versão final</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasKeyword -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasKeyword">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasMoreRelevance -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasMoreRelevance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSameInterest -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSameInterest">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopicWeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopicWeight">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#TopicWeight"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Weight"/>
+        <rdfs:comment>Relação referente a ter um peso relacionado ao tópico.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#name">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#totalWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#totalWeight"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#weight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#KeywordWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#KeywordWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Weight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#None -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#None"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Required -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Required">
+        <rdfs:comment>Classe que tem como objetivo indicar o tópico/tópico específico de interesse, para recomendação.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#SpecificTopic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#SpecificTopic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#TopicWeight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#TopicWeight">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Weight"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Weight -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Weight"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#LPSubject -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#LPSubject">
+        <rdf:type rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#NONE"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C++</name>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Java</name>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">python</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#MLSubject -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#MLSubject">
+        <rdf:type rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+        <hasSpecificTopic rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonForML"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#NONE"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scikit-learn</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#NONE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#NONE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#None"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonForML -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonForML">
+        <rdf:type rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#SpecificTopic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonSubject -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonSubject">
+        <rdf:type rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Required"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+        <hasSpecificTopic rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonForML"/>
+        <subTopicOf rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#NONE"/>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">python</name>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">python2.7</name>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scikit-learn</name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#LPSubject"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#MLSubject"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#LPSubject"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonSubject"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#MLSubject"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#PythonSubject"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#ww">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tww">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s3">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">node hasTopic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">node hasSubject</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasKeyword"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">node hasKeywordWeight</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S10</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasKeyword"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">node hasSpecificTopic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyword hasSubject</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#name"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#name"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#stringEqualIgnoreCase"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1"/>
+                                                            <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Node hasMoreRelevance</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S15</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopicWeight"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopicWeight"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#ww"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#totalWeight"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#totalWeight"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#ww"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tww"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw"/>
+                                                                                    <rdf:Description rdf:about="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tww"/>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasMoreRelevance"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subject is Topic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#None"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s3"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s3"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s3"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight hasSpecificTopic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S12</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Weight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight hasTopic</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S11</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Define &apos;weight&apos; como &apos;KeywordWeight&apos;</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Keyword"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#k"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#KeywordWeight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SameInterest</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Topic"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSameInterest"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SpecificTopic Required ***</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S14</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopicWeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#ww"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSpecificTopic"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#ww"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#ww"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Required"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#st"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Topic Required **</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S13</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopicWeight"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasTopic"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Required"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasWeight"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#tw"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#w"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">node hasSubject (subTopicOf)</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Node"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#subTopicOf"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#Subject"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#hasSubject"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#n"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/talessil/ontologies/2019/7/untitled-ontology-42#s2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
